@@ -1,0 +1,518 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(11, 11, 39);
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(11, 11, 39, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    transition: all 0.3s ease;
+}
+header a{
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 16px;
+    color: rgb(172, 172, 190);
+    border-radius: 6px;
+    position: relative;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+header a:hover {
+    color: #3b82f6; 
+    background-color: rgba(59, 130, 246, 0.08);
+}
+header h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: white;
+    margin-bottom: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.about{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 100px 20px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+    margin-top: 0;
+}
+.about img{
+    border-radius: 50%; 
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+.about img:hover {
+    transform: scale(1.05);
+}
+.about h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #3b82f6; 
+    margin-bottom: 25px;
+}
+.about h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 36px; 
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.about p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(172, 172, 190); 
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+}.about .msgBtn, 
+.about .projectsBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 170px;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    text-decoration: none;
+}
+.about .msgBtn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+}
+.about .msgBtn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+.about .projectsBtn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.about .projectsBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: white;
+    transform: translateY(-2px);
+}
+.skills{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #3b82f6; 
+    margin-bottom: 5px;
+}
+.skills p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(172, 172, 190); 
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+}
+.skills .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width:90%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.skills .cards img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+.skills .cards div:hover img {
+    transform: scale(1.1);
+}
+.skills .cards span{
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.skills .cards p {
+    color: rgb(172, 172, 190); 
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+.skills .cards .html , .skills .cards .css , .skills .cards .js , .skills .cards .tailwind-css , .skills .cards .react-js , .skills .cards .git{
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+.skills .cards .html:hover, 
+.skills .cards .css:hover, 
+.skills .cards .js:hover, 
+.skills .cards .tailwind-css:hover, 
+.skills .cards .react-js:hover, 
+.skills .cards .git:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.projects{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 100px 20px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+    margin-top: 0;
+}
+.projects h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #3b82f6; 
+    margin-bottom: 5px;
+}
+.projects p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(172, 172, 190); 
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+}
+.projects .prjCard{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.projects .prjCard h4{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+.projects .prjCard p{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(150, 150, 165);
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+.projects .prjCard img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.5s ease;
+}
+.projects .prjCard .todolist , .projects .prjCard .googleClone , .projects .prjCard .gymWebsite{
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects .prjCard .todolist .part-two , .projects .prjCard .googleClone .part-two ,
+.projects .prjCard .gymWebsite .part-two{
+    padding: 25px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+.projects .prjCard .todolist .part-two a , .projects .prjCard .googleClone .part-two a ,
+.projects .prjCard .gymWebsite .part-two a{
+    text-decoration: none;
+    color: #3b82f6; 
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    width: fit-content;
+    transition: color 0.2s ease;
+}
+.projects .prjCard .todolist .part-two a:hover , .projects .prjCard .googleClone .part-two a:hover ,
+.projects .prjCard .gymWebsite .part-two a:hover{
+    text-decoration: underline;
+}
+.projects .prjCard .todolist:hover , .projects .prjCard .googleClone:hover , 
+.projects .prjCard .gymWebsite:hover{
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+.projects .prjCard .part-two a:hover {
+    color: #2563eb;
+    text-decoration: none;
+}
+.projects .prjCard .part-two a i {
+    font-size: 12px;
+}
+.contact{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #3b82f6; 
+    margin-bottom: 5px;
+}
+.contact p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(172, 172, 190); 
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+}
+.contact .contCard{
+    height: auto;
+    min-height: 320px;
+    width: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px 15px;
+}
+.contact .contCard label{
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 6px;
+    display: block;
+    text-align: left;
+    padding: 0 10px;
+}
+.contact .contCard .input1{
+    padding: 10px;
+    min-width: 180px;
+    width: 95%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px ;
+    transition: border 0.6s ease;
+}
+.contact .contCard .input2{
+    padding: 10px;
+    width: 95%;
+    min-height: 200px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    transition: border 0.6s ease;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact .contCard .input2:focus-within ,.contact .contCard .input1:focus-within{
+    border: 1px solid white;
+}
+.contact .contCard button{
+    padding: 12px;
+    background-color: white;
+    width: 95%;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    color: rgb(35, 35, 36);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease , color 0.3s ease;
+    margin-bottom: 15px;
+}
+.contact .contCard button:hover{
+    background-color: rgb(180, 178, 178);
+}
+footer{
+    padding: 40px 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 11, 39, 0.95);
+    position: relative;
+    z-index: 10;
+}
+footer span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(150, 150, 165);
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+footer .social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+footer .social-links a{
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(150, 150, 165);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+footer .social-links a:hover{
+    color: #3b82f6; 
+    transform: translateY(-2px);
+}
+/* mNA9wd-nzR6FMUB */
+#errorMsg{
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-weight: 600;
+    text-align: center;
+    min-height: 20px;
+}
+@media (max-width: 768px) {
+header {
+    height: auto; 
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 20px;
+    gap: 15px; 
+}
+header h1 {
+    font-size: 18px; 
+}
+header nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px; 
+}
+header a {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+}
+@media (max-width: 768px) {
+.about, .skills, .projects, .contact {
+    padding: 60px 16px; 
+}
+.skills .cards {
+    width: 100%; 
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+    gap: 15px; 
+}
+.skills .cards .html, .skills .cards .css, .skills .cards .js, .skills .cards .tailwind-css, 
+.skills .cards .react-js, .skills .cards .git {
+    padding: 20px 10px;
+}
+.skills .cards span {
+    font-size: 15px; 
+}
+.skills .cards p {
+    font-size: 12px;
+}
+.projects .prjCard {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+.projects .prjCard .todolist, .projects .prjCard .googleClone, .projects .prjCard .gymWebsite {
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;  
+}
+.contact .contCard {
+    width: 100%;
+    padding: 25px 20px;
+}
+}

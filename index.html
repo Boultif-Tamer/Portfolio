@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Tamer's Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="about" class="about">
+        <h2>About</h2>
+        <img src="images.png" alt="picture">
+        <h3>Hi, I'm Tamer</h3>
+        <p>
+            <span>I'm a beginner developer learning to build clean, responsive websites and web applications.</span>
+           <span>I enjoy turning ideas into code and improving a little every day.</span>
+        </p>
+        <a href="#contact" class="msgBtn"><i class="fa-regular fa-envelope"></i> Get in touch</a>
+        <a href="#projects" class="projectsBtn">View projects</a>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p>Technologies and tools I'm currently learning and using.</p>
+        <div class="cards">
+            <div class="html">
+                <img src="free-html-logo-icon-svg-download-png-2944937.webp" alt="HTML5">
+                <span>HTML</span>
+                <p>Semantic structure & accessibility</p>
+            </div>
+            <div class="css">
+                <img src="css-3-logo-png_seeklogo-426083.webp" alt="CSS3">
+                <span>CSS</span>
+                <p>Responsive layouts & animations</p>
+            </div>
+            <div class="js">
+                <img src="javascript-r.webp" alt="JS">
+                <span>JavaScript</span>
+                <p>DOM logic & ES6+ features</p>
+            </div>
+            <div class="tailwind-css">
+                <img src="tailwind-css3232.logowik.com.webp" alt="TAILWIND-CSS">
+                <span>Tailwind CSS</span>
+                <p>Utility-first styling</p>
+            </div>
+            <div class="react-js">
+                <img src="lg-671506d711354-React.webp" alt="REACT-JS">
+                <span>React</span>
+                <p>Components, hooks & state</p>
+            </div>
+            <div class="git">
+                <img src="github.webp" alt="GIT-GITHUB">
+                <span>Git / Github</span>
+                <p>Version control & collaboration</p>
+            </div>
+        </div> 
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <p>A few things I've built while learning. More coming soon.</p>
+        <div class="prjCard">
+            <div class="todolist">
+                <img src="To-Do-List-screenshot.png" alt="To-Do-List">
+                <div class="part-two">
+                    <h4>CRUD To-Do-List</h4>
+                    <p>A full-cycle productivity dashboard managing persistent task states through dynamic CRUD architecture. Built with real-time UI data streams, strict form input sanitization guards, and localized browser cache engines to preserve user modifications instantly across page reloads.</p>
+                    <a href="">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="googleClone">
+                <img src="Google-Clone-screenshot.png" alt="Google-Clone">
+                <div class="part-two">
+                    <h4>Google Clone</h4>
+                    <p>A detailed front-end replica of the classic Google search engine UI interface. Designed to master absolute pixel-perfect asset alignment, complex layout component centering, and pristine fluid form interactions built entirely from raw CSS styles.</p>
+                    <a href="">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                    
+            </div>
+            <div class="gymWebsite">
+                <img src="Gym-WebSite-screenshot.png" alt="Gym-website">
+                <div class="part-two">
+                    <h4>Gym Web-site</h4>
+                    <p>A full-stack fitness management system featuring secure authentication paths for both clients and administrators. Clients can manage profile data, track active memberships, and schedule sessions, while the custom admin dashboard provides robust metrics panels to track registrations, audit subscriptions, and manage site schedules.</p>
+                    <a href="">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact me</h2>
+        <p>Have a question or want to work together? Send me a message.</p>
+        <div class="contCard">
+            <form action="https://formspree.io/f/xojopyoz" method="POST" id="form">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" class="input1" id="nameInp">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="you@example.com" class="input1" id="emailInp">
+                <label>Message</label>
+                <textarea name="message" class="input2" placeholder="Tell me about your project..." id="msgInp"></textarea>
+                <button type="submit" id="myBtn"><i class="fa-regular fa-paper-plane"></i> Send message</button>
+            </form>
+            <p id="errorMsg"></p>
+        </div>
+
+    </section>
+    <footer>
+        <span>© 2026 Tamer Dev. All rights reserved.</span>
+        <div class="social-links">
+            <a href="" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+            <a href="" target="_blank" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
