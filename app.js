@@ -1,7 +1,6 @@
 // declarations
 let myBtn = document.getElementById("myBtn")
 let form = document.getElementById("form")
-
 // add event listener 
 form.addEventListener("submit" , (x)=>{
     x.preventDefault()
@@ -25,5 +24,16 @@ form.addEventListener("submit" , (x)=>{
     }
     errorMsg.style.color = "#10b981";
     errorMsg.innerHTML = 'Thank you! Your message has been sent successfully <i class="fa-solid fa-paper-plane"></i>';
-    form.submit();
+
+    // This sends the data to Netlify in the background without refreshing or breaking the page
+    let myForm = x.target;
+    let formData = new FormData(myForm);
+    
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(() => console.log("Form successfully submitted to Netlify"))
+    .catch((error) => alert(error));
 })
