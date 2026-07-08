@@ -34,6 +34,9 @@ form.addEventListener("submit" , (x)=>{
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
     })
-    .then(() => console.log("Form successfully submitted to Netlify"))
+    .then(() => {
+        console.log("Form successfully submitted to Netlify");
+        form.reset();    
+})
     .catch((error) => alert(error));
 })
