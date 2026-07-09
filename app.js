@@ -40,3 +40,17 @@ form.addEventListener("submit" , (x)=>{
 })
     .catch((error) => alert(error));
 })
+
+let hamburger = document.getElementById("hamburger")
+let navlinks = document.getElementById("nav-links")
+let visible = true
+hamburger.addEventListener("click" , ()=>{
+    if(visible){
+        navlinks.classList.add("hide")
+        visible = false
+    }
+    else{
+        navlinks.classList.remove("hide")
+        visible = true
+    }
+})
